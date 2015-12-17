@@ -1,0 +1,142 @@
+name:          tct-bundle-jbc
+version:       0.1.0.0
+stability:     experimental
+author:
+  Michael Schaper
+maintainer:
+  Michael Schaper <michael.schaper@uibk.ac.at>,
+license:       BSD3
+license-file:  LICENSE
+category:      Program Analysis
+synopsis:      Resource Analysis of Object-Oriented Bytecode Programs
+description:
+  This package bundles several TcT modules for the automated resource analysis
+  of object-oriented bytecode programs.
+build-type:    Simple
+cabal-version: >= 1.8
+
+source-repository head
+  type:     git
+  location: git://github.com/ComputationWithBoundedResources/tct-bundle-jbc
+
+
+executable tct-trs
+  main-is:
+    Trs.hs
+  hs-source-dirs:
+    app
+  build-depends:
+    array              == 0.5.*,
+    bytestring         >= 0.10.4 && < 0.10.7,
+    containers         >= 0.5 && < 0.6,
+    fgl                == 5.5.*,
+    filepath           >= 1.3,
+    mtl                >= 2.1 && <= 2.3,
+    base               == 4.*,
+    process            >= 1.1,
+    temporary          == 1.2.0.*,
+
+    term-rewriting     == 0.*,
+    term-rewriting-xml == 0.1.0.*,
+
+    slogic             == 0.*,
+    tct-common         == 3.1.*,
+    tct-core           == 3.1.*,
+    tct-trs            == 3.1.*
+
+  extensions:
+    ConstraintKinds,
+    DataKinds,
+    DeriveDataTypeable,
+    DeriveFoldable,
+    DeriveFunctor,
+    DeriveTraversable,
+    GeneralizedNewtypeDeriving,
+    FlexibleContexts,
+    FlexibleInstances,
+    GADTs,
+    MultiParamTypeClasses,
+    TypeFamilies,
+    TypeOperators
+
+  ghc-options:
+    -Wall -threaded -fno-warn-orphans -fno-spec-constr-count -rtsopts -with-rtsopts=-N
+
+Executable tct-its
+  main-is: 
+    Its.hs
+  hs-source-dirs:
+    app
+  build-depends:
+    containers       >= 0.5 && < 0.6,
+    mtl              >= 2.1 && < 2.3,
+    base             == 4.*,
+    fgl              == 5.5.*,
+    fgl-visualize    == 0.1.0.*,
+    parsec           == 3.1.*,
+
+    slogic           == 0.*,
+    tct-common       == 3.1.*,
+    tct-core         == 3.1.*,
+    tct-its          == 3.1.*
+
+  extensions: 
+    ConstraintKinds,
+    DataKinds,
+    DeriveDataTypeable,
+    FlexibleInstances,
+    GeneralizedNewtypeDeriving,
+    MultiParamTypeClasses, 
+    TypeFamilies,
+    TypeOperators
+
+  ghc-options:
+    -Wall -threaded -fno-warn-orphans -fno-spec-constr-count -rtsopts -with-rtsopts=-N
+
+
+executable tct-inttrs
+  hs-source-dirs:
+    app
+  main-is:
+    IntTrs.hs
+  build-depends:
+    array              == 0.5.*,
+    bytestring         >= 0.10.4 && < 0.10.7,
+    containers         >= 0.5 && < 0.6,
+    fgl                == 5.5.*,
+    filepath           >= 1.3,
+    mtl                >= 2.1 && <= 2.3,
+    base               == 4.*,
+    process            >= 1.1,
+    temporary          == 1.2.0.*,
+
+    term-rewriting     == 0.*,
+    term-rewriting-xml == 0.1.0.*,
+
+    slogic             == 0.*,
+    tct-common         == 3.1.*,
+    tct-core           == 3.1.*,
+    tct-trs            == 3.1.*,
+    tct-its            == 3.1.*,
+
+    tct-inttrs
+
+  extensions:
+    ConstraintKinds,
+    DataKinds,
+    DeriveDataTypeable,
+    DeriveFoldable,
+    DeriveFunctor,
+    DeriveTraversable,
+    GeneralizedNewtypeDeriving,
+    FlexibleContexts,
+    FlexibleInstances,
+    GADTs,
+    MultiParamTypeClasses,
+    TypeFamilies,
+    TypeOperators
+
+  ghc-options:
+    -Wall -threaded -fno-warn-orphans -fno-spec-constr-count -rtsopts -with-rtsopts=-N
+
+
