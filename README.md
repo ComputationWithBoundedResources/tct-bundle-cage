@@ -20,6 +20,7 @@ The commands `minismt` and `yices-smt` have to be in `$PATH`.
 
 Other packages:
   * [slogic](https://github.com/ComputationWithBoundedResources/slogic/)
+  * [term-rewriting-xml](https://github.com/ComputationWithBoundedResources/term-rewriting-xml/)
   * [tct-core](https://github.com/ComputationWithBoundedResources/tct-core/)
   * [tct-common](https://github.com/ComputationWithBoundedResources/tct-common/)
   * [tct-its](https://github.com/ComputationWithBoundedResources/tct-its/)
@@ -37,20 +38,22 @@ accompanied `stack.dev.yaml` file.
 
 To build and install the executables first obtain the required packages.
 ```bash
-mkdir tct-bundle-inttrs
-cd tct-bundle-inttrs
-git clone https://github.com/ComputationWithBoundedResources/slogic
-git clone https://github.com/ComputationWithBoundedResources/tct-core
-git clone https://github.com/ComputationWithBoundedResources/tct-common
-git clone https://github.com/ComputationWithBoundedResources/tct-its
-git clone https://github.com/ComputationWithBoundedResources/tct-trs
-git clone https://github.com/ComputationWithBoundedResources/tct-inttrs
-git clone https://github.com/ComputationWithBoundedResources/tct-bundle-inttrs
+git clone https://github.com/ComputationWithBoundedResources/tct-bundle-inttrs &&
+cd tct-bundle-inttrs &&
+mkdir modules &&
+git clone https://github.com/ComputationWithBoundedResources/slogic modules/slogic &&
+git clone https://github.com/ComputationWithBoundedResources/term-rewriting-xml modules/term-rewriting-xml &&
+git clone https://github.com/ComputationWithBoundedResources/tct-core modules/tct-core &&
+git clone https://github.com/ComputationWithBoundedResources/tct-common modules/tct-common &&
+git clone https://github.com/ComputationWithBoundedResources/tct-its modules/tct-its &&
+git clone https://github.com/ComputationWithBoundedResources/tct-trs modules/tct-trs &&
+git clone https://github.com/ComputationWithBoundedResources/tct-inttrs modules/tct-inttrs
 ```
+
+Alternatively clone the repository and execute the `install.sh` script.
 
 Then execute the following command:
 ```bash
-cd tct-bundle-inttrs
 STACK_YAML=stack.dev.yaml stack install tct-its tct-trs tct-inttrs
 ```
 

@@ -1,14 +1,14 @@
 flags: {}
 packages:
 - '.'
-- '../term-rewriting-xml'
+- 'modules/term-rewriting-xml'
 
-- '../slogic'
-- '../tct-core'
-- '../tct-common'
-- '../tct-trs'
-- '../tct-its'
-- '../tct-inttrs'
+- 'modules/slogic'
+- 'modules/tct-core'
+- 'modules/tct-common'
+- 'modules/tct-trs'
+- 'modules/tct-its'
+- 'modules/tct-inttrs'
 extra-deps:
 - dotgen-0.4.2
 - fgl-visualize-0.1.0.1
