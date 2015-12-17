@@ -1,4 +1,4 @@
-name:          tct-bundle-jbc
+name:          tct-bundle-inttrs
 version:       0.1.0.0
 stability:     experimental
 author:
@@ -11,13 +11,13 @@ category:      Program Analysis
 synopsis:      Resource Analysis of Object-Oriented Bytecode Programs
 description:
   This package bundles several TcT modules for the automated resource analysis
-  of object-oriented bytecode programs.
+  of integer term rewrite systems.
 build-type:    Simple
 cabal-version: >= 1.8
 
 source-repository head
   type:     git
-  location: git://github.com/ComputationWithBoundedResources/tct-bundle-jbc
+  location: git://github.com/ComputationWithBoundedResources/tct-bundle-inttrs
 
 
 executable tct-trs
@@ -138,5 +138,4 @@ executable tct-inttrs
 
   ghc-options:
     -Wall -threaded -fno-warn-orphans -fno-spec-constr-count -rtsopts -with-rtsopts=-N
-
 

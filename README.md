@@ -1,7 +1,6 @@
-##tct-bundle-jbc
+##tct-bundle-inttrs
 This package is part of the _Tyrolean Complexity Tool (TcT)_ and bundles
-several TcT modules for the resource analysis of object-oriented bytecode
-programs.
+several TcT modules for the resource analysis of integer term rewrite systems.
 
 The package provides three executables. For more information we refer to the
 corresponding repositories.
@@ -38,27 +37,27 @@ accompanied `stack.dev.yaml` file.
 
 To build and install the executables first obtain the required packages.
 ```bash
-mkdir tct-bundle-jbc
-cd tct-bundle-jbc
+mkdir tct-bundle-inttrs
+cd tct-bundle-inttrs
 git clone https://github.com/ComputationWithBoundedResources/slogic
 git clone https://github.com/ComputationWithBoundedResources/tct-core
 git clone https://github.com/ComputationWithBoundedResources/tct-common
 git clone https://github.com/ComputationWithBoundedResources/tct-its
 git clone https://github.com/ComputationWithBoundedResources/tct-trs
 git clone https://github.com/ComputationWithBoundedResources/tct-inttrs
-git clone https://github.com/ComputationWithBoundedResources/tct-bundle-jbc
+git clone https://github.com/ComputationWithBoundedResources/tct-bundle-inttrs
 ```
 
 Then execute the following command:
 ```bash
-cd tct-bundle-jbc
+cd tct-bundle-inttrs
 STACK_YAML=stack.dev.yaml stack install tct-its tct-trs tct-inttrs
 ```
 
 
 ### USAGE
 
-Further information and usage details can be found int the corresponding repositories.
+Further information and usage details can be found in the corresponding repositories.
   * [tct-its](https://github.com/ComputationWithBoundedResources/tct-its#readme)
   * [tct-trs](https://github.com/ComputationWithBoundedResources/tct-trs#readme)
   * [tct-inttrs](https://github.com/ComputationWithBoundedResources/tct-iinttrs#readme)
