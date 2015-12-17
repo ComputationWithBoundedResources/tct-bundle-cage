@@ -54,6 +54,8 @@ cd tct-bundle-inttrs
 STACK_YAML=stack.dev.yaml stack install tct-its tct-trs tct-inttrs
 ```
 
+Per default `stack install` copies the executables in `$HOME/.local/bin`.
+
 
 ### USAGE
 
