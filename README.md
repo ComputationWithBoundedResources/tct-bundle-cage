@@ -65,5 +65,5 @@ Per default `stack install` copies the executables in `$HOME/.local/bin`.
 Further information and usage details can be found in the corresponding repositories.
   * [tct-its](https://github.com/ComputationWithBoundedResources/tct-its#readme)
   * [tct-trs](https://github.com/ComputationWithBoundedResources/tct-trs#readme)
-  * [tct-inttrs](https://github.com/ComputationWithBoundedResources/tct-iinttrs#readme)
+  * [tct-inttrs](https://github.com/ComputationWithBoundedResources/tct-inttrs#readme)
 
