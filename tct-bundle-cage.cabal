@@ -8,10 +8,9 @@ maintainer:
 license:       BSD3
 license-file:  LICENSE
 category:      Program Analysis
-synopsis:      Resource Analysis of Object-Oriented Bytecode Programs
+synopsis:      Resource Analysis
 description:
-  This package bundles several TcT modules for the automated resource analysis
-  of integer term rewrite systems.
+  This package bundles several TcT modules for CAGE.
 build-type:    Simple
 cabal-version: >= 1.8
 

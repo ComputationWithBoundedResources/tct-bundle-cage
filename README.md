@@ -1,6 +1,5 @@
-##tct-bundle-inttrs
-This package is part of the _Tyrolean Complexity Tool (TcT)_ and bundles
-several TcT modules for the resource analysis of integer term rewrite systems.
+##tct-bundle-cage
+This package is part of the _Tyrolean Complexity Tool (TcT)_ and bundles several TcT modules.
 
 The package provides three executables. For more information we refer to the
 corresponding repositories.
@@ -8,6 +7,9 @@ corresponding repositories.
   * [tct-trs](https://github.com/ComputationWithBoundedResources/tct-trs#readme)
   * [tct-inttrs](https://github.com/ComputationWithBoundedResources/tct-iinttrs#readme)
 
+###Note
+This bundle relies on specicalised branches that may deviate from the standard behaviour of the `tct-tools`.
+Additional information can be found in `NOTE.md`.
 
 ###Requirements
 
@@ -38,19 +40,14 @@ accompanied `stack.dev.yaml` file.
 
 To build and install the executables first obtain the required packages.
 ```bash
-git clone https://github.com/ComputationWithBoundedResources/tct-bundle-inttrs &&
-cd tct-bundle-inttrs &&
+git clone https://github.com/ComputationWithBoundedResources/tct-bundle-cage &&
+pushd tct-bundle-inttrs &&
 mkdir modules &&
-git clone https://github.com/ComputationWithBoundedResources/slogic modules/slogic &&
-git clone https://github.com/ComputationWithBoundedResources/term-rewriting-xml modules/term-rewriting-xml &&
-git clone https://github.com/ComputationWithBoundedResources/tct-core modules/tct-core &&
-git clone https://github.com/ComputationWithBoundedResources/tct-common modules/tct-common &&
-git clone https://github.com/ComputationWithBoundedResources/tct-its modules/tct-its &&
-git clone https://github.com/ComputationWithBoundedResources/tct-trs modules/tct-trs &&
-git clone https://github.com/ComputationWithBoundedResources/tct-inttrs modules/tct-inttrs
+./install.sh &&
+popd
 ```
 
-Alternatively clone the repository and execute the `install.sh` script.
+Alternatively clone the repository and run the `install.sh` script.
 
 Then execute the following command:
 ```bash
